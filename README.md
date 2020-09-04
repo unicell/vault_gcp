@@ -1,3 +1,26 @@
+<!-- vim-markdown-toc GFM -->
+
+* [Vault auth and secrets on GCP](#vault-auth-and-secrets-on-gcp)
+    * [Setup](#setup)
+        * [Start Vault](#start-vault)
+        * [Authorize Root Admin session](#authorize-root-admin-session)
+        * [Create a new Policy restricted token](#create-a-new-policy-restricted-token)
+            * [Vault Secret](#vault-secret)
+            * [Vault Encryption/Decryption (Transit Engine)](#vault-encryptiondecryption-transit-engine)
+    * [GCP Vault Auth](#gcp-vault-auth)
+        * [Vault auth for GCE instances](#vault-auth-for-gce-instances)
+        * [Vault auth using Google OIDC](#vault-auth-using-google-oidc)
+    * [GCP Vault Secrets](#gcp-vault-secrets)
+        * [AccessToken](#accesstoken)
+        * [ServiceAccount Key](#serviceaccount-key)
+        * [KMS based secrets](#kms-based-secrets)
+    * [Misc](#misc)
+        * [Vault Enhancement Feature Requests](#vault-enhancement-feature-requests)
+            * [Asking Vault to return OIDC tokens](#asking-vault-to-return-oidc-tokens)
+            * [Asking Vault to return GCP JWTAccessToken](#asking-vault-to-return-gcp-jwtaccesstoken)
+
+<!-- vim-markdown-toc -->
+
 # Vault auth and secrets on GCP
 
 Sample workflow covering basic use of Vault on GCP.
